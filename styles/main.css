@@ -1,0 +1,96 @@
+body {
+    margin: 0;
+}
+
+
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    background-color: #232222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.wrapper h1 {
+    margin-bottom: 40px;
+    font-size: 40px;
+    color: white;
+    letter-spacing: 9px;
+    font-family: sans-serif;
+    text-shadow: 0px 2px 0px black;
+}
+
+.wrapper .calculator {
+    width: 30%;
+    height: 70%;
+    background-color: #9d1872;
+    box-shadow: 5px 7px 25px 20px #161516;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.wrapper .calculator .inputField {
+    background-color: #d5cfcf;
+    height: 20%;
+    border: 4px inset #410c3d;
+    border-bottom: none;
+}
+
+.blockForChooseOperation {
+    height: 15%;
+    display: flex;
+    align-items: center;
+}
+
+
+.wrapper .calculator .mainPart {
+    width: 100%;
+    height: 65%;
+    display: flex;
+    background-color: rgba(58, 56, 56, 0.6);
+    padding: 5px;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+
+.wrapper .calculator .mainPart .blockForNumbers {
+    width: 80%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.wrapper .calculator .mainPart .blockForOtherOperations {
+    width: 20%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 20px;
+}
+
+
+.sub {
+    color: #076fb1;
+    font-size: 38px;
+}
+
+footer {
+    display: flex;
+    width: 100%;
+    padding-right: 20px;
+    box-sizing: border-box;
+    justify-content: end;
+}
+
+h5 {
+    color: white;
+    letter-spacing: 1px;
+    font-size: 20px;
+    font-family: sans-serif;
+}
