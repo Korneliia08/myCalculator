@@ -108,10 +108,12 @@ function showInInput(event) {
 
     if (value === "=") {
         textOfInput = textOfInput.replaceAll("Pi", "3.14")
+        textOfInput = textOfInput.replaceAll("−", "-");
         textOfInput = textOfInput.replaceAll("×", "*");
         textOfInput = textOfInput.replaceAll("÷", "/");
         let result = eval(textOfInput);
         result = Math.round(result * 100) / 100;
+        textOfInput = textOfInput.replaceAll("-", "−");
         textOfInput = textOfInput.replaceAll("*", "×");
         textOfInput = textOfInput.replaceAll("/", "÷");
         forHistory.textContent = textOfInput;
