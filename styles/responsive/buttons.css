@@ -1,0 +1,17 @@
+@media (max-width: 1100px) {
+    .otherButtons {
+        border: 1px inset #790566;
+    }
+
+    .font {
+        font-size: 18px;
+    }
+
+
+    .numberButton {
+        width: calc(33% - 4px);
+        height: 20%;
+        margin: 12px 2px 2px 2px;
+    }
+}
+

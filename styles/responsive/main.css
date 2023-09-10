@@ -1,0 +1,43 @@
+@media (max-width: 800px) {
+    .wrapper h1 {
+        font-size: 30px;
+    }
+
+    .wrapper h1 sub {
+        font-size: 30px;
+    }
+}
+
+
+@media (max-width: 650px) {
+    .wrapper h1 {
+        font-size: 25px;
+    }
+
+    .wrapper h1 sub {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 600px) {
+    .wrapper h1 {
+        font-size: 28px;
+    }
+
+    .wrapper h1 sub {
+        width: 100%;
+        display: block;
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 400px) {
+    .wrapper h1 {
+        font-size: 24px;
+    }
+
+    .wrapper h1 sub {
+        font-size: 24px;
+    }
+}
+

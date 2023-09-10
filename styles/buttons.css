@@ -25,10 +25,17 @@
 }
 
 .otherButtons {
+    min-width: 40px;
     width: 80%;
     height: 30%;
     margin: 0 5px 0 5px;
     background-color: #ce49ac;
     border: 2px inset #790566;
+}
+
+.font {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
 }
 

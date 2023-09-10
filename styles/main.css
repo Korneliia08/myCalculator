@@ -11,6 +11,8 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .wrapper h1 {
@@ -22,12 +24,19 @@ body {
     text-shadow: 0px 2px 0px black;
 }
 
+.wrapper h1 sub {
+    color: #076fb1;
+    font-size: 38px;
+}
+
 .wrapper .calculator {
+    min-width: 280px;
     width: 30%;
     height: 70%;
+    border-radius: 20px;
     background-color: #9d1872;
-    box-shadow: 5px 7px 25px 20px #161516;
     padding: 40px;
+    box-shadow: 6px -5px 20px 0px #250325, 5px -5px 18px 5px #181515, 5px 5px 25px -4px black, 2px -5px 25px 5px #776d6d;
     box-sizing: border-box;
 }
 
@@ -36,6 +45,33 @@ body {
     height: 20%;
     border: 4px inset #410c3d;
     border-bottom: none;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    padding: 4px;
+    box-sizing: border-box;
+}
+
+.wrapper .calculator .inputField .partForValue {
+    height: 33%;
+    margin: 5px;
+}
+
+.wrapper .calculator .inputField .partForValue p {
+    margin: 0;
+    font-size: 24px;
+    color: black;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.wrapper .calculator .inputField .partForValue p {
+    margin: 0;
+    font-size: 26px;
+    text-shadow: 1px 1px 1px black;
+    color: black;
+    font-weight: bold;
+    font-family: sans-serif;
 }
 
 .blockForChooseOperation {
@@ -74,11 +110,6 @@ body {
     row-gap: 20px;
 }
 
-
-.sub {
-    color: #076fb1;
-    font-size: 38px;
-}
 
 footer {
     display: flex;
