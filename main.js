@@ -4,12 +4,13 @@ let blockForOtherOperations = document.querySelector(".blockForOtherOperations")
 let inputField = document.querySelector(".inputField");
 
 let forValue = document.querySelector(".forValue");
-let forResult = document.querySelector(".forResult");
+let forHistory = document.querySelector(".forHistory");
 
 
 // let operationsForButtons = ["&#43;", "&#8722;", "&#215;", "&#247;"];
 let operationsForButtons = ["+", "-", "*", "/", "Pi"];
 let numbersForButtons = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, ".", "AC"];
+
 let otherOperations = ["C", "All", "=", "(", ")"];
 
 
@@ -73,6 +74,9 @@ function showOperationsInInput(event) {
 function showNumbersInInput(event) {
     let value = event.target.textContent;
     let textOfInput = forValue.textContent;
+    if (textOfInput == 0) {
+        forValue.textContent = "";
+    }
     if (value !== "AC") {
         forValue.append(value);
     } else {
@@ -92,7 +96,7 @@ function showInInput(event) {
     }
     if (value === "All") {
         forValue.textContent = "";
-        forResult.textContent = "";
+        forHistory.textContent = "Start:";
     }
     if (value === "(" || value === ")") {
         forValue.append(value);
@@ -102,8 +106,8 @@ function showInInput(event) {
         textOfInput = textOfInput.replaceAll("Pi", "3.14159265359")
         let result = eval(textOfInput);
         result = Math.round(result * 100) / 100;
-        forResult.textContent = `Result: ${result}`;
-        console.log(result);
+        forHistory.textContent = textOfInput;
+        forValue.textContent = result;
     }
 }
 
