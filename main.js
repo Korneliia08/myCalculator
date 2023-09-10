@@ -7,11 +7,13 @@ let forValue = document.querySelector(".forValue");
 let forHistory = document.querySelector(".forHistory");
 
 
-// let operationsForButtons = ["&#43;", "&#8722;", "&#215;", "&#247;"];
-let operationsForButtons = ["+", "-", "*", "/", "Pi"];
-let numbersForButtons = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, ".", "AC"];
+let operationsForButtons = ["&#43;", "&#8722;", "&#215;", "&#247;", "Pi"];
+let numbersForButtons = [7, 8, 9, 4, 5, 6, 1, 2, 3, 0, ".", "AC"];
 
 let otherOperations = ["C", "All", "=", "(", ")"];
+
+
+let charsOfOperation = ["+", "-", "*", "/"];
 
 
 function createButtonsOperations() {
@@ -48,8 +50,6 @@ function createButtonsForOtherOperations() {
         })
 }
 
-
-let charsOfOperation = ["+", "−", "×", "÷"];
 
 function showOperationsInInput(event) {
 
@@ -103,9 +103,13 @@ function showInInput(event) {
     }
 
     if (value === "=") {
-        textOfInput = textOfInput.replaceAll("Pi", "3.14159265359")
+        textOfInput = textOfInput.replaceAll("Pi", "3.14")
+        textOfInput = textOfInput.replaceAll("×", "*");
+        textOfInput = textOfInput.replaceAll("÷", "/");
         let result = eval(textOfInput);
         result = Math.round(result * 100) / 100;
+        textOfInput = textOfInput.replaceAll("*", "×");
+        textOfInput = textOfInput.replaceAll("/", "÷");
         forHistory.textContent = textOfInput;
         forValue.textContent = result;
     }

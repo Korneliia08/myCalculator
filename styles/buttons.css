@@ -21,14 +21,14 @@
 .numberButton {
     width: calc(33% - 10px);
     height: 20%;
-    margin: 12px 5px 2px 5px;
+    margin: 0px 5px 0px 5px;
 }
 
 .otherButtons {
-    min-width: 40px;
+    min-width: 47px;
     width: 80%;
-    height: 30%;
-    margin: 0 5px 0 5px;
+    height: 35px;
+    margin: 0 20px 0 5px;
     background-color: #ce49ac;
     border: 2px inset #790566;
 }
