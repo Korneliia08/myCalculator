@@ -59,6 +59,9 @@ function showOperationsInInput(event) {
     let indexLastChar = valuesFromInput.length - 1;
     let lastCharInInput = valuesFromInput[indexLastChar];
     if (textOfButton === "Pi") {
+        if (valuesFromInput === '0') {
+            forValue.textContent = "";
+        }
         forValue.append('Pi');
         return
     }
@@ -74,8 +77,9 @@ function showOperationsInInput(event) {
 function showNumbersInInput(event) {
     let value = event.target.textContent;
     let textOfInput = forValue.textContent;
-    if (textOfInput == 0) {
+    if (textOfInput === '0') {
         forValue.textContent = "";
+
     }
     if (value !== "AC") {
         forValue.append(value);
