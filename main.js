@@ -106,6 +106,7 @@ function showInInput(event) {
         forValue.append(value);
     }
 
+    
     if (value === "=") {
         textOfInput = textOfInput.replaceAll("Pi", "3.14")
         textOfInput = textOfInput.replaceAll("−", "-");
