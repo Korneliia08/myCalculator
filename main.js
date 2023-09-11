@@ -77,9 +77,18 @@ function showOperationsInInput(event) {
 function showNumbersInInput(event) {
     let value = event.target.textContent;
     let textOfInput = forValue.textContent;
+    let indexOfLastChar = textOfInput.length - 1;
+    let lastChar = textOfInput[indexOfLastChar];
+
+    if (value === "." && lastChar !== ".") {
+        forValue.append(value);
+        return;
+    }
+    if (value === ".") {
+        return;
+    }
     if (textOfInput === '0') {
         forValue.textContent = "";
-
     }
     if (value !== "AC") {
         forValue.append(value);
@@ -106,8 +115,12 @@ function showInInput(event) {
         forValue.append(value);
     }
 
-    
+
     if (value === "=") {
+        if (textOfInput === "") {
+            return;
+        }
+
         textOfInput = textOfInput.replaceAll("Pi", "3.14")
         textOfInput = textOfInput.replaceAll("−", "-");
         textOfInput = textOfInput.replaceAll("×", "*");
