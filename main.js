@@ -67,7 +67,7 @@ function addAnEventHandler(event) {
         calculateAndOtherFunctions(")");
         return;
     }
-
+    console.log(event.code);
     switch (event.code) {
         case "Numpad0":
         case "Digit0":
@@ -129,6 +129,9 @@ function addAnEventHandler(event) {
             showOperationsInInput("÷");
             break;
         case "Equal":
+            calculateAndOtherFunctions("=");
+            break;
+        case "Enter":
             calculateAndOtherFunctions("=");
             break;
     }
