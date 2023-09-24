@@ -59,6 +59,18 @@ function createButtonsOfOtherOperations() {
 }
 
 function addAnEventHandler(event) {
+    console.log(event.code, event.shiftKey);
+
+    if (event.code === "Equal" && event.shiftKey) {
+        showOperationsInInput("+");
+        return;
+    }
+    if (event.code === "Digit8" && event.shiftKey) {
+        showOperationsInInput("*");
+        return;
+    }
+
+
     if (event.code === "Digit9" && event.shiftKey) {
         calculateAndOtherFunctions("(");
         return;
@@ -67,7 +79,7 @@ function addAnEventHandler(event) {
         calculateAndOtherFunctions(")");
         return;
     }
-    console.log(event.code);
+
     switch (event.code) {
         case "Numpad0":
         case "Digit0":
@@ -110,9 +122,12 @@ function addAnEventHandler(event) {
             showNumbersInInput(9);
             break;
         case "Period":
-        case"Slash":
             showNumbersInInput(".");
             break;
+        case"Slash":
+            showOperationsInInput("÷");
+            break;
+
         case"Backspace":
             showNumbersInInput("AC");
             break;
@@ -120,6 +135,7 @@ function addAnEventHandler(event) {
             showOperationsInInput("+");
             break;
         case "NumpadSubtract":
+        case "Minus":
             showOperationsInInput("−");
             break;
         case "NumpadMultiply":
